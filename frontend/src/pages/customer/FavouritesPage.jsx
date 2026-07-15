@@ -1,3 +1,3 @@
 export const FavouritesPage = () => {
-  return <></>;
+  return <>FavouritesPage</>;
 };
