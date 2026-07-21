@@ -14,7 +14,7 @@ import { RegisterPage } from './pages/auth/RegisterPage'
 function App() {
   return (
       <BrowserRouter>
-        <Routes>
+      <Routes>
           <Route element={<CustomerLayout />}>
             <Route index element={<HomePage />} />
             <Route path='favorites' element={<FavouritesPage />} />
