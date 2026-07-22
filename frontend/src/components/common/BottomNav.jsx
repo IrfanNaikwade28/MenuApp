@@ -23,7 +23,7 @@ const navItems = [
 
 export const BottomNav = () => {
   return (
-    <nav className="fixed bottom-4 left-4 right-4">
+    <nav className="fixed bottom-4 left-4 right-4 text-primary">
       <div className="flex items-center justify-around rounded-full bg-white py-2 shadow-[0px_1px_4px_rgba(0,0,0,0.18)]">
         {navItems.map((navItem) => (
           <NavLink

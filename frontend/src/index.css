@@ -3,10 +3,10 @@
 
 @theme{
     --color-brand:#FFBE1A;
-    --color-text:#353535;
-    --color-text-secondary: #AFAFAF;
-    --color-background-secondary: #FAFAFA;
-    --color-border: #ECECEC;
+    --color-primary:#353535;
+    --color-secondary: #AFAFAF;
+    --color-back-secondary: #FAFAFA;
+    --color-box-border: #ECECEC;
 }
 
 body {
