@@ -1,13 +1,35 @@
 import { useState } from "react";
 import { Greeting } from "../../components/home/Greeting";
-import { requestLocation, getLocationName } from "../../api/location";
+import { HomeMap } from "../../components/map/HomeMap";
+import { LocationCard } from "../../components/map/LocationCard";
+import { requestLocation, getLocationName, formatLocation } from "../../api/location";
 export const HomePage = () => {
+  const [coordinates, setCoordinates] = useState({
+    latitude: null,
+    longitude: null,
+  });
   const [location, setLocation] = useState("Turn on Location");
-  const onLocation = () => {
-    requestLocation(async(latitude, longitude) => {
-      const address = await getLocationName(latitude,longitude)
-      setLocation(`${address.road}, ${address.suburb}`);    });
+  const [hasLocation, setHasLocation] = useState(false);
+  const [isLoadingLocation, setIsLoadingLocation] = useState(false);
 
+  const onLocation = () => {
+    setIsLoadingLocation(true);
+    requestLocation(async (latitude, longitude) => {
+      const address = await getLocationName(latitude, longitude);
+      if (!address) {
+        setLocation("Not Found");
+        setHasLocation(false);
+        return;
+      }
+      const location = formatLocation(address);
+      setLocation(location)
+      setCoordinates({
+        latitude,
+        longitude,
+      });
+      setHasLocation(true);
+      setIsLoadingLocation(false);
+    });
   };
   return (
     <>
@@ -17,6 +39,14 @@ export const HomePage = () => {
           location={location}
           onLocationClick={onLocation}
         />
+        {hasLocation ? (
+          <HomeMap
+            latitude={coordinates.latitude}
+            longitude={coordinates.longitude}
+          />
+        ) : (
+          <LocationCard isLoadingLocation={isLoadingLocation} onLocationClick={onLocation} />
+        )}
       </div>
     </>
   );
