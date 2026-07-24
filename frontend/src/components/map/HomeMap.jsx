@@ -11,7 +11,7 @@ export const HomeMap = ({ latitude, longitude }) => {
         initialViewState={{
           longitude: longitude || 74.2433,
           latitude: latitude || 16.705,
-          zoom: latitude && longitude ? 12 : 13,
+          zoom: latitude && longitude ? 17 : 17,
         }}
         mapStyle={MAP_STYLE}
         style={{ width: "100%", height: "100%" }}
