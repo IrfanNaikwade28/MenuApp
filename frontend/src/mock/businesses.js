@@ -82,7 +82,7 @@ export const businesses = [
     openingHours: {
       open: "10:00 AM",
       close: "11:00 PM",
-      isOpen: true
+      isOpen: false
     },
 
     cuisines: [

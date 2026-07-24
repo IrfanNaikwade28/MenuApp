@@ -2,7 +2,7 @@ import MapPin from "../../assets/icons/map-location.svg?react"
 import MapPlaceholder from '../../assets/images/map-placeholder.png'
 export const LocationCard = ({ onLocationClick, isLoadingLocation }) => {
   return (
-    <div className="relative mt-4 h-[330px] overflow-hidden rounded-3xl">
+    <div className="relative mt-4 h-[330px] overflow-hidden rounded-xl">
       {/* Background Image */}
       <img
         src={MapPlaceholder}

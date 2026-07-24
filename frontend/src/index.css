@@ -8,12 +8,23 @@
     --color-back-secondary: #FAFAFA;
     --color-box-border: #ECECEC;
     --color-app-orange:#FF8D28;
+    --text-xss:10px;
+    --text-es:8px;
 }
 
 body {
   font-family: "Outfit", sans-serif;
 }
 
-.maplibregl-ctrl-bottom-right, .maplibregl-ctrl-top-right{
+.maplibregl-ctrl-bottom-right{
     display: none;
+}
+
+.remove-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.remove-scrollbar {
+    -ms-overflow-style: none; /* IE & Edge */
+    scrollbar-width: none;    /* Firefox */
 }

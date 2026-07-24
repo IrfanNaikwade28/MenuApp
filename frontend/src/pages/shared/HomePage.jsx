@@ -3,12 +3,14 @@ import { Greeting } from "../../components/home/Greeting";
 import { HomeMap } from "../../components/map/HomeMap";
 import { LocationCard } from "../../components/map/LocationCard";
 import { requestLocation, getLocationName, formatLocation } from "../../api/location";
+import { HomeDiscovery } from "../../components/home/HomeDiscovery";
 export const HomePage = () => {
+
   const [coordinates, setCoordinates] = useState({
     latitude: null,
     longitude: null,
   });
-  const [location, setLocation] = useState("Turn on Location");
+  const [location, setLocation] = useState("");
   const [hasLocation, setHasLocation] = useState(false);
   const [isLoadingLocation, setIsLoadingLocation] = useState(false);
 
@@ -47,6 +49,8 @@ export const HomePage = () => {
         ) : (
           <LocationCard isLoadingLocation={isLoadingLocation} onLocationClick={onLocation} />
         )}
+
+        <HomeDiscovery />
       </div>
     </>
   );

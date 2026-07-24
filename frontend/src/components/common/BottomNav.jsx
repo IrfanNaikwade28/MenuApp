@@ -31,7 +31,7 @@ export const BottomNav = () => {
             key={navItem.path}
             to={navItem.path}
             className={({ isActive }) =>
-              `flex items-center gap-2 rounded-full px-5 py-3 transition-all duration-300 ease-in-out
+              `flex items-center gap-2 rounded-full px-6 py-3 transition-all duration-300 ease-in-out
               ${isActive ? " bg-brand" : " bg-white"}`
             }
           >
