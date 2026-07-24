@@ -45,7 +45,7 @@ export const Filter = () => {
         onClick={() => setIsFilterOpen((prev) => !prev)}
         className="flex items-center justify-center rounded-lg border border-gray-200 bg-back-secondary px-4 py-4"
       >
-        <FilterIcon className="w-5 h-5" />
+        <FilterIcon className={`w-5 h-5 ${isFilterOpen?'text-brand':'text-primary'}`} />
       </button>
       {isFilterOpen && (
         <div
