@@ -1,42 +1,9 @@
 import { useState } from "react";
 import FilterIcon from "../../assets/icons/filter.svg?react";
-import Clock from "../../assets/icons/clock.svg?react";
-import Star from "../../assets/icons/rated.svg?react";
-import Location from "../../assets/icons/nearby.svg?react";
-import Veg from "../../assets/icons/veg.svg?react";
-import NonVeg from "../../assets/icons/non-veg.svg?react";
 import { Checkbox } from "./Checkbox";
-const filters = [
-  {
-    id: "open",
-    label: "Open Now",
-    icon: Clock,
-  },
-  {
-    id: "rating",
-    label: "Highly Rated",
-    icon: Star,
-  },
-  {
-    id: "near",
-    label: "Near By",
-    icon: Location,
-  },
-  {
-    id: "veg",
-    label: "Veg",
-    icon: Veg,
-  },
-  {
-    id: "non-veg",
-    label: "Non-Veg",
-    icon: NonVeg,
-  },
-];
 
-export const Filter = () => {
+export const Filter = ({filterData, onChange, selectedFilters}) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [selectedFilters, setSelectedFilters] = useState({});
 
   return (
     <div className="relative">
@@ -51,7 +18,7 @@ export const Filter = () => {
         <div
           className={`flex justify-between flex-col bg-white shadow-[0px_1px_4px_rgba(0,0,0,0.20)] absolute w-44 h-44 right-0 top-16 py-3 rounded-lg`}
         >
-          {filters.map((filter) => {
+          {filterData.map((filter) => {
             const Icon = filter.icon;
             return (
               <div
@@ -61,14 +28,11 @@ export const Filter = () => {
                 <Checkbox
                   checked={selectedFilters[filter.id] || false}
                   onChange={(e) =>
-                    setSelectedFilters((prev) => ({
-                      ...prev,
-                      [filter.id]: e.target.checked,
-                    }))
+                    onChange(filter.id, e.target.checked)
                   }
                 />
                 <p className="text-left w-full pl-3 text-xs text-primary font-light select-none">{filter.label}</p>
-                <Icon className="w-4 h-4" />
+                <Icon className={`w-4 h-4 ${filter.styles}`} />
               </div>
             );
           })}

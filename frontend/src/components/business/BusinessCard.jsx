@@ -14,7 +14,6 @@ export const BusinessCard = ({business}) => {
         <div className="absolute bottom-3 left-3 rounded-md bg-white px-3 py-1 text-xs text-primary shadow">
           {business.cuisines.slice(0,3).join(' | ')}
         </div>
-
         {/* Rating */}
         <div className="absolute right-3 top-3 flex items-center gap-1 rounded-md bg-green-600 px-2">
           <span className="flex gap-1 items-center text-xs font-semibold text-white">
@@ -82,7 +81,7 @@ export const BusinessCard = ({business}) => {
           {/* Button */}
           <button
             type="button"
-            onClick={()=>(alert())}
+            onClick={()=>(alert('under development'))}
             className="flex shrink-0 items-center gap-1 rounded-md bg-primary px-3 py-1 text-xss text-white"
           >
             <Direction className="h-3 w-3" />
