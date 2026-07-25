@@ -10,9 +10,9 @@ export const DiscoverBusinesses = ({ businesses }) => {
             Find your favourite food nearby
           </div>
         </div>
-        <div className="select-none flex gap-1 text-brand items-center text-xs font-light">
+        <button type='button' onClick={()=>alert('Under Developement')} className="select-none flex gap-1 text-brand items-center text-xs font-light">
           See all <Arrow className="w-4 h-4" />
-        </div>
+        </button>
       </div>
 
       <div className="py-5 flex flex-col gap-3">

@@ -1,18 +1,32 @@
+import { NavLink } from "react-router-dom";
+
 import Star from "../../assets/icons/star.svg?react";
 import Location from "../../assets/icons/mini-location.svg?react";
 import Clock from "../../assets/icons/clock.svg?react";
 import Tick from "../../assets/icons/tick.svg?react";
 import Direction from "../../assets/icons/direct-up.svg?react";
-export const BusinessCard = ({business}) => {
+
+export const BusinessCard = ({ business }) => {
+  const handleDirections = () => {
+    alert("feature is under development");
+  };
   return (
-    <div className="overflow-hidden rounded-xl border border-gray-200 bg-back-secondary">
+    <NavLink
+      type="button"
+      to={`/business/${business.id}`}
+      className="overflow-hidden text-left rounded-2xl border border-gray-200 bg-back-secondary"
+    >
       {/* Image */}
       <div className="relative">
-        <img src={business.coverImage} alt="Business" className="h-32 w-full object-cover" />
+        <img
+          src={business.coverImage}
+          alt="Business"
+          className="h-32 w-full object-cover"
+        />
 
         {/* Cuisines */}
         <div className="absolute bottom-3 left-3 rounded-md bg-white px-3 py-1 text-xs text-primary shadow">
-          {business.cuisines.slice(0,3).join(' | ')}
+          {business.cuisines.slice(0, 3).join(" | ")}
         </div>
         {/* Rating */}
         <div className="absolute right-3 top-3 flex items-center gap-1 rounded-md bg-green-600 px-2">
@@ -42,9 +56,13 @@ export const BusinessCard = ({business}) => {
 
           <div className="ml-3 shrink-0 text-right">
             <div className="flex items-center justify-end gap-1">
-              <Clock className={`h-3 w-3 shrink-0 ${business.openingHours.isOpen ? 'text-green-600':'text-red-600'}`} />
-              <span className={`text-sm font-medium ${business.openingHours.isOpen ? 'text-green-600':'text-red-600'}`}>
-                {business.openingHours.isOpen ? 'Open':'Closed'}
+              <Clock
+                className={`h-3 w-3 shrink-0 ${business.openingHours.isOpen ? "text-green-600" : "text-red-600"}`}
+              />
+              <span
+                className={`text-sm font-medium ${business.openingHours.isOpen ? "text-green-600" : "text-red-600"}`}
+              >
+                {business.openingHours.isOpen ? "Open" : "Closed"}
               </span>
             </div>
 
@@ -81,7 +99,10 @@ export const BusinessCard = ({business}) => {
           {/* Button */}
           <button
             type="button"
-            onClick={()=>(alert('under development'))}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleDirections();
+            }}
             className="flex shrink-0 items-center gap-1 rounded-md bg-primary px-3 py-1 text-xss text-white"
           >
             <Direction className="h-3 w-3" />
@@ -89,6 +110,6 @@ export const BusinessCard = ({business}) => {
           </button>
         </div>
       </div>
-    </div>
+    </NavLink>
   );
 };

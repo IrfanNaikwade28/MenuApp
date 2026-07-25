@@ -1,34 +1,34 @@
-import icon from '../assets/icons'
+import { Clock, Star, Location, Veg, NonVeg } from './icons'
 
 const filterData = [
   {
     id: "open",
     label: "Open Now",
-    icon: icon.Clock,
+    icon: Clock,
     styles: 'text-green-600',
   },
   {
     id: "rating",
     label: "Highly Rated",
-    icon: icon.Star,
+    icon: Star,
     styles: '',
   },
   {
     id: "near",
     label: "Near By",
-    icon: icon.Location,
+    icon: Location,
     styles: '',
   },
   {
     id: "veg",
     label: "Veg",
-    icon: icon.Veg,
+    icon: Veg,
     styles: '',
   },
   {
     id: "non-veg",
     label: "Non-Veg",
-    icon: icon.NonVeg,
+    icon: NonVeg,
     styles: '',
   },
 ];

@@ -1,7 +1,6 @@
 export const menus = {
   1: {
     businessId: 1,
-
     specialMenu: [
       {
         id: 1,
