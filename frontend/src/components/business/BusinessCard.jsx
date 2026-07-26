@@ -1,5 +1,4 @@
-import { NavLink } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 import Star from "../../assets/icons/star.svg?react";
 import Location from "../../assets/icons/mini-location.svg?react";
 import Clock from "../../assets/icons/clock.svg?react";
@@ -7,14 +6,18 @@ import Tick from "../../assets/icons/tick.svg?react";
 import Direction from "../../assets/icons/direct-up.svg?react";
 
 export const BusinessCard = ({ business }) => {
+  const navigate = useNavigate();
+
+  const handleBusinessCard = () => {
+    navigate(`/business/${business.id}`);
+  };
   const handleDirections = () => {
     alert("feature is under development");
   };
   return (
-    <NavLink
-      type="button"
-      to={`/business/${business.id}`}
-      className="overflow-hidden text-left rounded-2xl border border-gray-200 bg-back-secondary"
+    <div
+      onClick={handleBusinessCard}
+      className="overflow-hidden text-left rounded-2xl border border-gray-200 bg-back-secondary cursor-pointer"
     >
       {/* Image */}
       <div className="relative">
@@ -110,6 +113,6 @@ export const BusinessCard = ({ business }) => {
           </button>
         </div>
       </div>
-    </NavLink>
+    </div>
   );
 };

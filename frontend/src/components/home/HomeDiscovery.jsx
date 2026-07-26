@@ -4,7 +4,7 @@ import { SearchInput } from "../ui/SearchInput";
 import { Filter } from "../ui/Filter";
 import { CuisineList } from "./CuisineList";
 import { DiscoverBusinesses } from "./DiscoverBusinesses";
-import { filterData } from "../../constants/filter";
+import { filterData } from "../../constants/filters";
 
 export const HomeDiscovery = () => {
   const [searchQuery, setSearchQuery] = useState("");

@@ -1,36 +1,36 @@
-import { Clock, Star, Location, Veg, NonVeg } from './icons'
+import { Clock, Star, Location, Veg, NonVeg } from "./icons";
 
 const filterData = [
   {
     id: "open",
     label: "Open Now",
     icon: Clock,
-    styles: 'text-green-600',
+    styles: "text-green-600",
   },
   {
     id: "rating",
     label: "Highly Rated",
     icon: Star,
-    styles: '',
+    styles: "",
   },
   {
     id: "near",
     label: "Near By",
     icon: Location,
-    styles: '',
+    styles: "",
   },
   {
     id: "veg",
     label: "Veg",
     icon: Veg,
-    styles: '',
+    styles: "",
   },
   {
     id: "non-veg",
     label: "Non-Veg",
     icon: NonVeg,
-    styles: '',
+    styles: "",
   },
 ];
 
-export {filterData}
+export { filterData };
