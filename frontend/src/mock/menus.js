@@ -1,30 +1,30 @@
-export const menus = {
-  1: {
+export const menus = [
+  {
     businessId: 1,
     specialMenu: [
       {
         id: 1,
         name: "Butter Chicken",
         price: 320,
-        image: "/images/menu/butter-chicken.jpg",
+        image: "/images/Menu/DalMakhani.png",
       },
       {
         id: 2,
         name: "Paneer Tikka",
         price: 280,
-        image: "/images/menu/paneer-tikka.jpg",
+        image: "/images/Menu/PaneerBiryani.png",
       },
       {
         id: 3,
         name: "Chicken Biryani",
         price: 340,
-        image: "/images/menu/chicken-biryani.jpg",
+        image: "/images/Menu/DalMakhani.png",
       },
       {
         id: 4,
         name: "Veg Thali",
         price: 260,
-        image: "/images/menu/veg-thali.jpg",
+        image: "/images/Menu/PaneerBiryani.png",
       },
     ],
 
@@ -82,7 +82,7 @@ export const menus = {
     ],
   },
 
-  2: {
+  {
     businessId: 2,
 
     specialMenu: [
@@ -90,25 +90,19 @@ export const menus = {
         id: 1,
         name: "Cold Coffee",
         price: 180,
-        image: "/images/menu/cold-coffee.jpg",
+        image: "/images/Menu/DalMakhani.png",
       },
       {
         id: 2,
         name: "Red Velvet Cake",
         price: 220,
-        image: "/images/menu/red-velvet.jpg",
+        image: "/images/Menu/PaneerBiryani.png",
       },
       {
         id: 3,
         name: "Alfredo Pasta",
         price: 260,
-        image: "/images/menu/alfredo.jpg",
-      },
-      {
-        id: 4,
-        name: "Classic Burger",
-        price: 210,
-        image: "/images/menu/burger.jpg",
+        image: "/images/Menu/DalMakhani.png",
       },
     ],
 
@@ -166,7 +160,7 @@ export const menus = {
     ],
   },
 
-  3: {
+  {
     businessId: 3,
 
     specialMenu: [
@@ -174,25 +168,19 @@ export const menus = {
         id: 1,
         name: "Special Veg Thali",
         price: 280,
-        image: "/images/menu/thali.jpg",
+        image: "/images/Menu/DalMakhani.png",
       },
       {
         id: 2,
         name: "Paneer Butter Masala",
         price: 300,
-        image: "/images/menu/paneer.jpg",
+        image: "/images/Menu/PaneerBiryani.png",
       },
       {
         id: 3,
         name: "Masala Dosa",
         price: 150,
-        image: "/images/menu/dosa.jpg",
-      },
-      {
-        id: 4,
-        name: "Veg Biryani",
-        price: 240,
-        image: "/images/menu/veg-biryani.jpg",
+        image: "/images/Menu/DalMakhani.png",
       },
     ],
 
@@ -210,6 +198,7 @@ export const menus = {
       {
         id: 2,
         name: "Punjabi",
+
         items: [
           { id: 201, name: "Paneer Butter Masala", price: 300 },
           { id: 202, name: "Shahi Paneer", price: 310 },
@@ -250,33 +239,26 @@ export const menus = {
     ],
   },
 
-  4: {
+  {
     businessId: 4,
-
     specialMenu: [
       {
         id: 1,
         name: "Chocolate Truffle Cake",
         price: 650,
-        image: "/images/menu/truffle.jpg",
+        image: "/images/Menu/DalMakhani.png",
       },
       {
         id: 2,
         name: "Blueberry Cheesecake",
         price: 240,
-        image: "/images/menu/cheesecake.jpg",
+        image: "/images/Menu/PaneerBiryani.png",
       },
       {
         id: 3,
         name: "Garlic Bread",
         price: 140,
-        image: "/images/menu/garlic-bread.jpg",
-      },
-      {
-        id: 4,
-        name: "Butter Croissant",
-        price: 120,
-        image: "/images/menu/croissant.jpg",
+        image: "/images/Menu/DalMakhani.png",
       },
     ],
 
@@ -333,4 +315,4 @@ export const menus = {
       },
     ],
   },
-};
+];

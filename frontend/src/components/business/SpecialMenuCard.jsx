@@ -1,21 +1,21 @@
 export const SpecialMenuCard = ({ item }) => {
   return (
-    <div className="w-72 shrink-0 snap-start overflow-hidden rounded-2xl border border-gray-200 bg-white">
+    <div className="w-72 h-28 shrink-0 snap-start overflow-hidden rounded-xl border border-gray-200 bg-back-secondary">
       <div className="flex h-full">
         <img
           src={item.image}
           alt={item.name}
-          className="h-32 w-32 object-cover"
+          className="h-28 w-28 object-cover p-2 rounded-2xl"
         />
 
         <div className="flex flex-1 flex-col justify-between p-4">
           <div>
-            <h3 className="line-clamp-2 text-lg font-semibold text-primary">
+            <h3 className="line-clamp-2 text-base font-semibold text-primary leading-none">
               {item.name}
             </h3>
           </div>
 
-          <p className="text-2xl font-bold text-primary">₹{item.price}</p>
+          <p className="text-xl font-semibold text-primary">Rs.{item.price}/-</p>
         </div>
       </div>
     </div>

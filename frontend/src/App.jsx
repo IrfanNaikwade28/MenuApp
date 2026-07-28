@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ScrollToTop } from "./components/common/ScrollToTop";
 import { AppLayout } from "./layouts/AppLayout";
 import { CustomerLayout } from "./layouts/CustomerLayout";
 import { OwnerLayout } from "./layouts/OwnerLayout";
@@ -16,6 +17,7 @@ function App() {
   return (
     <AppLayout>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route element={<CustomerLayout />}>
             <Route index element={<HomePage />} />

@@ -1,4 +1,4 @@
-import { ChevronDown } from "../../constants/icons";
+import { ArrowDown } from "../../../constants/icons";
 
 export const AccordionItem = ({
   title,
@@ -6,28 +6,31 @@ export const AccordionItem = ({
   isOpen,
   onToggle,
   children,
+  className = "",
+  headerTextStyling = "",
+  headerStyle
 }) => {
   return (
-    <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
+    <div className={`overflow-hidden ${className}`}>
       <button
         onClick={onToggle}
-        className="flex w-full items-center justify-between p-4 text-left"
+        className={`flex w-full items-center justify-between text-left ${headerStyle}`}
       >
         <div>
-          <h3 className="font-semibold text-primary">{title}</h3>
+          <h3 className={`font-semibold text-primary ${headerTextStyling}`}>{title}</h3>
 
-          {subtitle && <p className="text-xs text-secondary">{subtitle}</p>}
+          {subtitle && <p className="text-sm font-light">{subtitle}</p>}
         </div>
 
-        <ChevronDown
-          className={`h-5 w-5 transition-transform duration-300 ${
+        <ArrowDown
+          className={`h-3 w-3 transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
       </button>
 
       <div
-        className={`grid transition-all duration-300 ${
+        className={`grid transition-all duration-300 ${headerStyle} ${
           isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}
       >

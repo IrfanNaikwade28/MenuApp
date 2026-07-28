@@ -33,4 +33,24 @@ const filterData = [
   },
 ];
 
-export { filterData };
+
+const filterMenuItemData = [
+  {
+    id: "under100",
+    label: "Under ₹100",
+  },
+  {
+    id: "between100and200",
+    label: "₹100 - ₹200",
+  },
+  {
+    id: "between200and300",
+    label: "₹200 - ₹300",
+  },
+  {
+    id: "above300",
+    label: "Above ₹300",
+  },
+];
+
+export { filterData, filterMenuItemData };

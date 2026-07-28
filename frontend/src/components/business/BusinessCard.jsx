@@ -98,7 +98,6 @@ export const BusinessCard = ({ business }) => {
               <span className="truncate">Valet Parking</span>
             </div>
           </div>
-
           {/* Button */}
           <button
             type="button"

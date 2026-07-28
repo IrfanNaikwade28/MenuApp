@@ -7,5 +7,6 @@ import ArrowLeft from "../assets/icons/arrow-left.svg?react";
 import Favorite from "../assets/icons/favorite.svg?react";
 import Share from "../assets/icons/share.svg?react";
 import Menu from "../assets/icons/menu.svg?react";
+import ArrowDown from "../assets/icons/arrow_down.svg?react";
 
-export { Clock, Star, Location, Veg, NonVeg, ArrowLeft, Favorite, Share, Menu };
+export { Clock, Star, Location, Veg, NonVeg, ArrowLeft, Favorite, Share, Menu, ArrowDown };

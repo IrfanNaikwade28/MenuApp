@@ -1,12 +1,8 @@
 import { ArrowLeft, Favorite, Share, Menu } from "../../constants/icons";
 import { BusinessCard } from "../../components/business/BusinessCard";
-import { useParams, useNavigate } from "react-router-dom";
-export const BusinessProfile = ({ businesses }) => {
+import { useNavigate } from "react-router-dom";
+export const BusinessProfile = ({ business }) => {
   const navigate = useNavigate();
-
-  const { id } = useParams();
-  const businessId = Number(id);
-  const business = businesses.find((business) => business.id === businessId);
 
   if (!business) {
     return (
