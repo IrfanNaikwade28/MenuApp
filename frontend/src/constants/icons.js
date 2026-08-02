@@ -8,5 +8,6 @@ import Favorite from "../assets/icons/favorite.svg?react";
 import Share from "../assets/icons/share.svg?react";
 import Menu from "../assets/icons/menu.svg?react";
 import ArrowDown from "../assets/icons/arrow_down.svg?react";
+import Phone from '../assets/icons/phone.svg?react'
 
-export { Clock, Star, Location, Veg, NonVeg, ArrowLeft, Favorite, Share, Menu, ArrowDown };
+export { Clock, Star, Location, Veg, NonVeg, ArrowLeft, Favorite, Share, Menu, ArrowDown, Phone };

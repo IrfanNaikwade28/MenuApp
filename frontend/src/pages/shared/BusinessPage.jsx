@@ -5,7 +5,8 @@ import { getMenuById } from "../../api/menus";
 import { BusinessProfile } from "../../components/business/BusinessProfile";
 import { SpecialMenu } from "../../components/business/SpecialMenu";
 import { DiscoverMenu } from "../../components/business/DiscoverMenu";
-
+import { BusinessInfo } from "../../components/business/BusinessInfo";
+import { KeepInMind } from "../../components/business/KeepInMind";
 export const BusinessPage = () => {
   const { id } = useParams();
   const [business, setBusiness] = useState(null);
@@ -28,10 +29,12 @@ export const BusinessPage = () => {
   }, [id]);
 
   return (
-    <div className="px-3 mt-3">
+    <div className="px-3 mt-3 mb-3">
       <BusinessProfile business={business} />
       <SpecialMenu items={specialMenu} />
       <DiscoverMenu menuCategories={menuCategories} />
+      <BusinessInfo business={business} />
+      <KeepInMind />
     </div>
   );
 };

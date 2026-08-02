@@ -17,12 +17,18 @@ export const businesses = [
       city: "Pune",
       state: "Maharashtra",
       pincode: "411001",
-      full: "Sheraton Grand Pune Bund Garden Road, Pune",
+      full: "Sheraton Grand Pune Bund Garden Hotel, Raja Bahadur Motilal Rd, Bund Garden, Sangamvadi, Pune, Maharashtra 411001",
     },
 
     contact: {
       phone: "+91 9876543210",
       email: "hello@chingari.com",
+    },
+
+    legal: {
+      name: "Chigari",
+      gstNumber: "239823982939",
+      fssaiLicense: "9843423340221",
     },
 
     location: {
@@ -32,11 +38,13 @@ export const businesses = [
 
     openingHours: {
       open: "11:00 AM",
-      close: "12:00 AM",
+      close: "11:59 PM",
       isOpen: true,
     },
+
     servesVeg: true,
     servesNonVeg: true,
+
     cuisines: ["North Indian", "Chinese"],
 
     features: [
@@ -64,12 +72,18 @@ export const businesses = [
       city: "Pune",
       state: "Maharashtra",
       pincode: "411048",
-      full: "NIBM Road, Pune",
+      full: "Marvel Edge, NIBM Road, Kondhwa, Pune, Maharashtra 411048",
     },
 
     contact: {
       phone: "+91 9988776655",
       email: "hello@bombon.com",
+    },
+
+    legal: {
+      name: "Bombon Cafe Pvt. Ltd.",
+      gstNumber: "27AABCB9988F1Z5",
+      fssaiLicense: "11524012000456",
     },
 
     location: {
@@ -82,11 +96,17 @@ export const businesses = [
       close: "11:00 PM",
       isOpen: false,
     },
+
     servesVeg: true,
     servesNonVeg: false,
+
     cuisines: ["Coffee", "Fast Food", "Desserts"],
 
-    features: ["Premium Coffee", "Free WiFi", "Indoor Seating"],
+    features: [
+      "Premium Coffee",
+      "Free WiFi",
+      "Indoor Seating",
+    ],
   },
 
   {
@@ -107,12 +127,18 @@ export const businesses = [
       city: "Pune",
       state: "Maharashtra",
       pincode: "411052",
-      full: "Karve Nagar, Pune",
+      full: "Karve Nagar Main Road, Near Cummins College, Pune, Maharashtra 411052",
     },
 
     contact: {
       phone: "+91 9765432100",
       email: "info@ayodhyaveg.com",
+    },
+
+    legal: {
+      name: "Ayodhya Veg Restaurant",
+      gstNumber: "27AAACA4421D1Z3",
+      fssaiLicense: "21524013000891",
     },
 
     location: {
@@ -125,11 +151,21 @@ export const businesses = [
       close: "11:30 PM",
       isOpen: true,
     },
+
     servesVeg: true,
     servesNonVeg: false,
-    cuisines: ["North Indian", "South Indian", "Chinese"],
 
-    features: ["Pure Veg", "Family Seating", "Parking Available"],
+    cuisines: [
+      "North Indian",
+      "South Indian",
+      "Chinese",
+    ],
+
+    features: [
+      "Pure Veg",
+      "Family Seating",
+      "Parking Available",
+    ],
   },
 
   {
@@ -143,19 +179,25 @@ export const businesses = [
     rating: 3.8,
     reviewCount: 531,
 
-    coverImage: "/images/businesses/chingari.png",
+    coverImage: "/images/businesses/ayodhya.png",
 
     address: {
       area: "Koregaon Park",
       city: "Pune",
       state: "Maharashtra",
       pincode: "411001",
-      full: "Koregaon Park, Pune",
+      full: "Lane No. 7, Koregaon Park, Pune, Maharashtra 411001",
     },
 
     contact: {
       phone: "+91 9123456789",
       email: "contact@artisanbakery.com",
+    },
+
+    legal: {
+      name: "Artisan Bakery",
+      gstNumber: "27AACCA7732B1Z2",
+      fssaiLicense: "31524014000976",
     },
 
     location: {
@@ -168,11 +210,21 @@ export const businesses = [
       close: "09:00 PM",
       isOpen: true,
     },
+
     servesVeg: true,
     servesNonVeg: true,
-    cuisines: ["Bakery", "Desserts", "Coffee"],
 
-    features: ["Freshly Baked", "Custom Cakes", "Takeaway"],
+    cuisines: [
+      "Bakery",
+      "Desserts",
+      "Coffee",
+    ],
+
+    features: [
+      "Freshly Baked",
+      "Custom Cakes",
+      "Takeaway",
+    ],
   },
 ];
 
