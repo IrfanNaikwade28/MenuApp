@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import Star from "../../assets/icons/star.svg?react";
-import Location from "../../assets/icons/mini-location.svg?react";
-import Clock from "../../assets/icons/clock.svg?react";
-import Tick from "../../assets/icons/tick.svg?react";
-import Direction from "../../assets/icons/direct-up.svg?react";
+import {
+  Star,
+  Location,
+  Clock,
+  Tick,
+  Direction,
+} from "../../constants/icons";
 
 export const BusinessCard = ({ business }) => {
   const navigate = useNavigate();
@@ -14,6 +16,7 @@ export const BusinessCard = ({ business }) => {
   const handleDirections = () => {
     alert("feature is under development");
   };
+
   return (
     <div
       onClick={handleBusinessCard}
@@ -31,6 +34,8 @@ export const BusinessCard = ({ business }) => {
         <div className="absolute bottom-3 left-3 rounded-md bg-white px-3 py-1 text-xs text-primary shadow">
           {business.cuisines.slice(0, 3).join(" | ")}
         </div>
+
+
         {/* Rating */}
         <div className="absolute right-3 top-3 flex items-center gap-1 rounded-md bg-green-600 px-2">
           <span className="flex gap-1 items-center text-xs font-semibold text-white">

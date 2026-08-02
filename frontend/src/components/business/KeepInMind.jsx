@@ -18,7 +18,7 @@ export const KeepInMind = () => {
       </ol>
 
       <button
-        className="mt-8 w-full rounded-xl py-3 border border-red-500 text-red-500 font-semibold bg-red-500/7 hover:bg-red-50"
+        className="mt-8 w-full rounded-xl py-3 border border-red-500 text-red-500 font-semibold bg-red-500/7 transition-all duration-150 active:scale-98 active:bg-red-500/10"
       >
         Report an issue with this menu
       </button>

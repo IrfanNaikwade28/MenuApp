@@ -1,7 +1,14 @@
-import { ArrowLeft, Favorite, Share, Menu } from "../../constants/icons";
-import { BusinessCard } from "../../components/business/BusinessCard";
+import {
+  ArrowLeft,
+  Favorite,
+  FavoriteFilled,
+  Share,
+  Menu,
+} from "../../constants/icons";
+import { BusinessCard } from "../common/BusinessCard";
 import { useNavigate } from "react-router-dom";
-export const BusinessProfile = ({ business }) => {
+
+export const BusinessProfile = ({ business, isFavorite, onFavoriteToggle }) => {
   const navigate = useNavigate();
 
   if (!business) {
@@ -15,13 +22,19 @@ export const BusinessProfile = ({ business }) => {
     <div className="flex flex-col">
       <div className="flex justify-between items-center px-1">
         <div className="left flex items-center">
-          <ArrowLeft
-            onClick={() => navigate(-1)}
-            className="w-7 h-7 cursor-pointer text-primary"
-          />
+          <button type="button" onClick={() => navigate(-1)}>
+            <ArrowLeft className="w-7 h-7 cursor-pointer text-primary" />
+          </button>
         </div>
         <div className="right flex items-center gap-5">
-          <Favorite className="w-6 h-6 text-primary" />
+          <button type="button" onClick={onFavoriteToggle}>
+            {isFavorite ? (
+              <FavoriteFilled className="w-6 h-6 text-red-400" />
+            ) : (
+              <Favorite className="w-6 h-6 text-primary" />
+            )}
+          </button>
+
           <Share className="w-6 h-6 text-primary" />
           <Menu className="w-6 h-6 text-primary" />
         </div>

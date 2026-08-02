@@ -1,5 +1,5 @@
 import Arrow from "../../assets/icons/arrow-circle-down.svg?react";
-import { BusinessCard } from "../business/BusinessCard";
+import { BusinessCard } from "../common/BusinessCard";
 export const DiscoverBusinesses = ({ businesses }) => {
   return (
     <div className="mt-10 pb-20">
@@ -15,7 +15,7 @@ export const DiscoverBusinesses = ({ businesses }) => {
         </button>
       </div>
 
-      <div className="py-5 flex flex-col gap-3">
+      <div className="py-5 flex flex-col gap-5">
         {businesses.length === 0 && (
           <div className="flex flex-col items-center justify-center py-20 text-center">
             {/* Icon */}

@@ -5,7 +5,7 @@ import { CustomerLayout } from "./layouts/CustomerLayout";
 import { OwnerLayout } from "./layouts/OwnerLayout";
 import { FullScreenLayout } from "./layouts/FullScreenLayout";
 import { HomePage } from "./pages/shared/HomePage";
-import { FavouritesPage } from "./pages/customer/FavouritesPage";
+import { FavoritesPage } from "./pages/customer/FavoritesPage";
 import { ProfilePage } from "./pages/customer/ProfilePage";
 import { ManageMenuPage } from "./pages/owner/ManageMenuPage";
 import { OwnerProfilePage } from "./pages/owner/OwnerProfilePage";
@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route element={<CustomerLayout />}>
             <Route index element={<HomePage />} />
-            <Route path="favorites" element={<FavouritesPage />} />
+            <Route path="favorites" element={<FavoritesPage />} />
             <Route path="profile" element={<ProfilePage />} />
           </Route>
           <Route path="owner" element={<OwnerLayout />}>

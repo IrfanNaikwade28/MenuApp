@@ -1,4 +1,4 @@
-import { Clock, Star, Location, Veg, NonVeg } from "./icons";
+import { Clock, Rating, Location, Veg, NonVeg } from "./icons";
 
 const filterData = [
   {
@@ -10,7 +10,7 @@ const filterData = [
   {
     id: "rating",
     label: "Highly Rated",
-    icon: Star,
+    icon: Rating,
     styles: "",
   },
   {
