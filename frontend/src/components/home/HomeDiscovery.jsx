@@ -51,30 +51,32 @@ export const HomeDiscovery = () => {
       const businessData = await getBusinesses();
       setBusinesses(businessData);
       const cuisineData = await getCuisines();
-      setCuisines(cuisineData)
+      setCuisines(cuisineData);
     };
     fetchData();
   }, []);
   return (
     <div className="mt-5">
-      <div className="flex justify-between gap-x-2">
-        <SearchInput
-          value={searchQuery}
-          onChange={handleSearchChange}
-          placeholder={"Search dishes..."}
-        />
-        <Filter
-          filterData={filterData}
-          onChange={handleFilterChange}
-          selectedFilters={selectedFilters}
-          filterStyle={"justify-between"}
-        />
+      <div className="sticky top-0 z-20 bg-white py-3">
+        <div className="flex justify-between gap-x-2">
+          <SearchInput
+            value={searchQuery}
+            onChange={handleSearchChange}
+            placeholder={"Search dishes..."}
+          />
+          <Filter
+            filterData={filterData}
+            onChange={handleFilterChange}
+            selectedFilters={selectedFilters}
+            filterStyle={"justify-between"}
+          />
+        </div>
       </div>
-      <CuisineList
-        selectedCuisine={selectedCuisine}
-        setSelectedCuisine={setSelectedCuisine}
-        cuisines={cuisines}
-      />
+        <CuisineList
+          selectedCuisine={selectedCuisine}
+          setSelectedCuisine={setSelectedCuisine}
+          cuisines={cuisines}
+        />
       <DiscoverBusinesses businesses={filteredBusinesses} />
     </div>
   );

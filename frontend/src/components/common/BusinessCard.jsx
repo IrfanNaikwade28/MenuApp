@@ -105,7 +105,7 @@ export const BusinessCard = ({ business, disableNavigation = false }) => {
               e.stopPropagation();
               handleDirections();
             }}
-            className="flex shrink-0 items-center gap-1 rounded-md bg-primary px-3 py-1 text-xss text-white"
+            className="flex shrink-0 items-center gap-1 rounded-md bg-primary px-3 py-1 text-xss text-white transition-all duration-150 active:scale-95"
           >
             <Direction className="h-3 w-3" />
             Get Directions

@@ -4,7 +4,7 @@ import { SearchInput } from "../ui/SearchInput";
 import { Filter } from "../ui/Filter";
 import { MenuItemsContainer } from "./MenuItemsContainer";
 
-export const DiscoverMenu = ({ menuCategories = []}) => {
+export const DiscoverMenu = ({ menuCategories = [] }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedFilters, setSelectedFilters] = useState({});
 
@@ -13,9 +13,7 @@ export const DiscoverMenu = ({ menuCategories = []}) => {
     const matchesSearch =
       !query ||
       category.name.toLowerCase().includes(query) ||
-      category.items.some((item) =>
-         item.name.toLowerCase().includes(query)
-       );
+      category.items.some((item) => item.name.toLowerCase().includes(query));
 
     return matchesSearch;
   });
@@ -30,17 +28,19 @@ export const DiscoverMenu = ({ menuCategories = []}) => {
   };
   return (
     <div className="mt-7">
-      <div className="flex justify-between gap-x-2">
-        <SearchInput
-          value={searchQuery}
-          onChange={handleSearchChange}
-          placeholder={"Search dishes..."}
-        />
-        <Filter
-          filterData={filterMenuItemData}
-          onChange={handleFilterChange}
-          selectedFilters={selectedFilters}
-        />
+      <div className="sticky top-0 z-20 bg-white py-3">
+        <div className="flex justify-between gap-x-2">
+          <SearchInput
+            value={searchQuery}
+            onChange={handleSearchChange}
+            placeholder={"Search dishes..."}
+          />
+          <Filter
+            filterData={filterMenuItemData}
+            onChange={handleFilterChange}
+            selectedFilters={selectedFilters}
+          />
+        </div>
       </div>
       <MenuItemsContainer menuCategories={filteredCategories} />
     </div>
