@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { Greeting } from "../../components/home/Greeting";
 import { HomeMap } from "../../components/map/HomeMap";
 import { LocationCard } from "../../components/map/LocationCard";
-import { getBusinessById } from "../../api/businesses";
+import { getBusinessById, getBusinesses } from "../../api/businesses";
 import {
   requestLocation,
   getLocationName,
@@ -14,6 +14,7 @@ import { useEffect } from "react";
 export const HomePage = () => {
   const [searchParams] = useSearchParams();
   const businessId = searchParams.get("business");
+  const [businesses, setBusinesses] = useState([])
   const [selectedBusiness, setSelectedBusiness] = useState(null);
   const [coordinates, setCoordinates] = useState({
     latitude: null,
@@ -43,10 +44,21 @@ export const HomePage = () => {
     });
   };
   useEffect(() => {
+    if (!businesses) return;
+    const fetchData = async () => {
+      const businessData = await getBusinesses();
+      setBusinesses(businessData)
+    };
+    fetchData();
+  })
+  useEffect(() => {
     if (!businessId) return;
+    if (!businesses) return;
     const fetchData = async () => {
       const data = await getBusinessById(businessId);
       setSelectedBusiness(data);
+      const businessData = await getBusinesses();
+      setBusinesses(businessData)
     };
     fetchData();
     window.scrollTo({
@@ -66,7 +78,8 @@ export const HomePage = () => {
           <HomeMap
             latitude={coordinates.latitude}
             longitude={coordinates.longitude}
-            destination={selectedBusiness?.location}
+            selectedBusiness={selectedBusiness}
+            businesses={businesses}
           />
         ) : (
           <LocationCard

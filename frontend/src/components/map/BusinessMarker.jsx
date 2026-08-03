@@ -1,15 +1,19 @@
 import { Marker } from "react-map-gl/maplibre";
-import { DestinationPin } from "../../constants/icons";
-export const BusinessMarker = ({ destination }) => {
-  if (!destination) return null;
-
+import { DestinationPin, BusinessPin } from "../../constants/icons";
+export const BusinessMarker = ({ business, isSelected }) => {
+  if (!business) return null;
   return (
     <Marker
-      latitude={destination.lat}
-      longitude={destination.lng}
+      latitude={business.location.lat}
+      longitude={business.location.lng}
       anchor="bottom"
     >
-      <DestinationPin className="w-7 h-7" />
+      {
+        isSelected ?
+      <DestinationPin className="w-7 h-7" />:
+      <BusinessPin className="w-7 h-7" />
+
+      }
     </Marker>
   );
 };

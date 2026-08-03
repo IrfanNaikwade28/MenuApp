@@ -16,6 +16,7 @@ import Phone from "../assets/icons/phone.svg?react";
 import NavigationPin from "../assets/icons/navigation.svg?react"
 import DestinationPin from "../assets/icons/destination.svg?react"
 import CurrentLocationPin from "../assets/icons/current-location-pin.svg?react"
+import BusinessPin from "../assets/icons/businessPin.svg?react"
 
 export {
   Clock,
@@ -35,5 +36,6 @@ export {
   Phone,
   NavigationPin,
   DestinationPin,
-  CurrentLocationPin
+  CurrentLocationPin,
+  BusinessPin
 };
