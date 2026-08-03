@@ -40,7 +40,7 @@ export const BusinessProfile = ({ business, isFavorite, onFavoriteToggle }) => {
         </div>
       </div>
       <div className="flex flex-col mt-4">
-        <BusinessCard business={business} />
+        <BusinessCard business={business} disableNavigation />
       </div>
     </div>
   );

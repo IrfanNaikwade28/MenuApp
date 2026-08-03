@@ -1,17 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import {
-  Star,
-  Location,
-  Clock,
-  Tick,
-  Direction,
-} from "../../constants/icons";
+import { Star, Location, Clock, Tick, Direction } from "../../constants/icons";
 
-export const BusinessCard = ({ business }) => {
+export const BusinessCard = ({ business, disableNavigation = false }) => {
   const navigate = useNavigate();
 
   const handleBusinessCard = () => {
-    navigate(`/business/${business.id}`);
+    if (!disableNavigation) {
+      navigate(`/business/${business.id}`);
+    }
   };
   const handleDirections = () => {
     alert("feature is under development");
@@ -34,7 +30,6 @@ export const BusinessCard = ({ business }) => {
         <div className="absolute bottom-3 left-3 rounded-md bg-white px-3 py-1 text-xs text-primary shadow">
           {business.cuisines.slice(0, 3).join(" | ")}
         </div>
-
 
         {/* Rating */}
         <div className="absolute right-3 top-3 flex items-center gap-1 rounded-md bg-green-600 px-2">

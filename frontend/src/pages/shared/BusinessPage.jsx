@@ -13,7 +13,6 @@ export const BusinessPage = () => {
   const { id } = useParams();
   const [business, setBusiness] = useState(null);
   const [favorites, setFavorites] = useState([]);
-  const [isFavorite, setIsFavorite] = useState();
   const [menuCategories, setMenuCategories] = useState([]);
   const [specialMenu, setSpecialMenu] = useState([]);
 
