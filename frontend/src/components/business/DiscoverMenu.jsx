@@ -28,7 +28,7 @@ export const DiscoverMenu = ({ menuCategories = [] }) => {
   };
   return (
     <div className="mt-7">
-      <div className="sticky top-0 z-20 bg-white py-3">
+      <div className="sticky top-0 z-20 bg-white py-3 border-b border-gray-100">
         <div className="flex justify-between gap-x-2">
           <SearchInput
             value={searchQuery}

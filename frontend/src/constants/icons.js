@@ -13,6 +13,9 @@ import Share from "../assets/icons/share.svg?react";
 import Menu from "../assets/icons/menu.svg?react";
 import ArrowDown from "../assets/icons/arrow_down.svg?react";
 import Phone from "../assets/icons/phone.svg?react";
+import NavigationPin from "../assets/icons/navigation.svg?react"
+import DestinationPin from "../assets/icons/destination.svg?react"
+import CurrentLocationPin from "../assets/icons/current-location-pin.svg?react"
 
 export {
   Clock,
@@ -30,4 +33,7 @@ export {
   Menu,
   ArrowDown,
   Phone,
+  NavigationPin,
+  DestinationPin,
+  CurrentLocationPin
 };

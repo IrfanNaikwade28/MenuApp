@@ -1,11 +1,20 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Greeting } from "../../components/home/Greeting";
 import { HomeMap } from "../../components/map/HomeMap";
 import { LocationCard } from "../../components/map/LocationCard";
-import { requestLocation, getLocationName, formatLocation } from "../../api/location";
+import { getBusinessById } from "../../api/businesses";
+import {
+  requestLocation,
+  getLocationName,
+  formatLocation,
+} from "../../api/location";
 import { HomeDiscovery } from "../../components/home/HomeDiscovery";
+import { useEffect } from "react";
 export const HomePage = () => {
-
+  const [searchParams] = useSearchParams();
+  const businessId = searchParams.get("business");
+  const [selectedBusiness, setSelectedBusiness] = useState(null);
   const [coordinates, setCoordinates] = useState({
     latitude: null,
     longitude: null,
@@ -24,7 +33,7 @@ export const HomePage = () => {
         return;
       }
       const location = formatLocation(address);
-      setLocation(location)
+      setLocation(location);
       setCoordinates({
         latitude,
         longitude,
@@ -33,6 +42,18 @@ export const HomePage = () => {
       setIsLoadingLocation(false);
     });
   };
+  useEffect(() => {
+    if (!businessId) return;
+    const fetchData = async () => {
+      const data = await getBusinessById(businessId);
+      setSelectedBusiness(data);
+    };
+    fetchData();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [businessId]);
   return (
     <>
       <div className="px-3 mt-3">
@@ -45,9 +66,13 @@ export const HomePage = () => {
           <HomeMap
             latitude={coordinates.latitude}
             longitude={coordinates.longitude}
+            destination={selectedBusiness?.location}
           />
         ) : (
-          <LocationCard isLoadingLocation={isLoadingLocation} onLocationClick={onLocation} />
+          <LocationCard
+            isLoadingLocation={isLoadingLocation}
+            onLocationClick={onLocation}
+          />
         )}
 
         <HomeDiscovery />

@@ -5,7 +5,7 @@ import {
   Share,
   Menu,
 } from "../../constants/icons";
-import { BusinessCard } from "../common/BusinessCard";
+import { BusinessCard } from "./BusinessCard";
 import { useNavigate } from "react-router-dom";
 
 export const BusinessProfile = ({ business, isFavorite, onFavoriteToggle }) => {

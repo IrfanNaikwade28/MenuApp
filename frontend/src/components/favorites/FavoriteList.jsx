@@ -1,4 +1,4 @@
-import { BusinessCard } from "../common/BusinessCard";
+import { BusinessCard } from "../business/BusinessCard";
 export const FavoriteList = ({ businesses, favorites }) => {
   const filteredBusinesses = businesses.filter((business) =>
     favorites.includes(business.id),

@@ -1,5 +1,5 @@
 import Arrow from "../../assets/icons/arrow-circle-down.svg?react";
-import { BusinessCard } from "../common/BusinessCard";
+import { BusinessCard } from "../business/BusinessCard";
 export const DiscoverBusinesses = ({ businesses }) => {
   return (
     <div className="mt-10 pb-20">

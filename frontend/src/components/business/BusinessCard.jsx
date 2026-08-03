@@ -10,7 +10,7 @@ export const BusinessCard = ({ business, disableNavigation = false }) => {
     }
   };
   const handleDirections = () => {
-    alert("feature is under development");
+    navigate(`/?business=${business.id}`);
   };
 
   return (
