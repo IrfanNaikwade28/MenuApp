@@ -35,11 +35,16 @@ export const BusinessProfile = ({ business, isFavorite, onFavoriteToggle }) => {
       alert("Link copied!");
     }
   };
+
   return (
     <div className="flex flex-col">
       <div className="flex justify-between items-center px-1">
         <div className="left flex items-center">
-          <button type="button" onClick={() => navigate(-1)}>
+          <button type="button"  onClick={() =>
+             window.history.length > 1
+               ? navigate(-1)
+               : navigate("/")
+           }>
             <ArrowLeft className="w-7 h-7 cursor-pointer text-primary" />
           </button>
         </div>
