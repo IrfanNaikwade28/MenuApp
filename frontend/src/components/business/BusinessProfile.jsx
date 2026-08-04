@@ -7,9 +7,11 @@ import {
 } from "../../constants/icons";
 import { BusinessCard } from "./BusinessCard";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export const BusinessProfile = ({ business, isFavorite, onFavoriteToggle }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   if (!business) {
     return (
@@ -18,6 +20,21 @@ export const BusinessProfile = ({ business, isFavorite, onFavoriteToggle }) => {
       </div>
     );
   }
+  const handleShare = async () => {
+    const currentUrl = `${window.location.origin}${location.pathname}`;
+    console.log(currentUrl);
+
+    if (navigator.share) {
+      await navigator.share({
+        title: business.name,
+        text: `Check out ${business.name}`,
+        url: currentUrl,
+      });
+    } else {
+      await navigator.clipboard.writeText(currentUrl);
+      alert("Link copied!");
+    }
+  };
   return (
     <div className="flex flex-col">
       <div className="flex justify-between items-center px-1">
@@ -27,15 +44,20 @@ export const BusinessProfile = ({ business, isFavorite, onFavoriteToggle }) => {
           </button>
         </div>
         <div className="right flex items-center gap-5">
-          <button type="button" onClick={onFavoriteToggle}>
+          <button
+            type="button"
+            onClick={onFavoriteToggle}
+            className="transition-transform duration-150 active:scale-90"
+          >
             {isFavorite ? (
-              <FavoriteFilled className="w-6 h-6 text-red-400" />
+              <FavoriteFilled className="h-6 w-6 scale-105 text-red-400" />
             ) : (
-              <Favorite className="w-6 h-6 text-primary" />
+              <Favorite className="h-6 w-6 text-primary" />
             )}
           </button>
-
-          <Share className="w-6 h-6 text-primary" />
+          <button onClick={handleShare} type="button">
+            <Share className="w-6 h-6 text-primary" />
+          </button>
           <Menu className="w-6 h-6 text-primary" />
         </div>
       </div>
