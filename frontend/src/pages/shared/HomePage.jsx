@@ -11,10 +11,11 @@ import {
 } from "../../api/location";
 import { HomeDiscovery } from "../../components/home/HomeDiscovery";
 import { useEffect } from "react";
+
 export const HomePage = () => {
   const [searchParams] = useSearchParams();
   const businessId = searchParams.get("business");
-  const [businesses, setBusinesses] = useState([])
+  const [businesses, setBusinesses] = useState([]);
   const [selectedBusiness, setSelectedBusiness] = useState(null);
   const [coordinates, setCoordinates] = useState({
     latitude: null,
@@ -47,10 +48,10 @@ export const HomePage = () => {
     if (!businesses) return;
     const fetchData = async () => {
       const businessData = await getBusinesses();
-      setBusinesses(businessData)
+      setBusinesses(businessData);
     };
     fetchData();
-  })
+  });
   useEffect(() => {
     if (!businessId) return;
     if (!businesses) return;
@@ -58,14 +59,14 @@ export const HomePage = () => {
       const data = await getBusinessById(businessId);
       setSelectedBusiness(data);
       const businessData = await getBusinesses();
-      setBusinesses(businessData)
+      setBusinesses(businessData);
     };
     fetchData();
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-  }, [businessId]);
+  }, [businessId, businesses]);
   return (
     <>
       <div className="px-3 mt-3">

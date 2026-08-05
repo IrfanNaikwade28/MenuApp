@@ -17,8 +17,20 @@ import NavigationPin from "../assets/icons/navigation.svg?react"
 import DestinationPin from "../assets/icons/destination.svg?react"
 import CurrentLocationPin from "../assets/icons/current-location-pin.svg?react"
 import BusinessPin from "../assets/icons/businessPin.svg?react"
-
+import GuestUser from "../assets/icons/guest-user.svg?react"
+import AboutIcon from "../assets/icons/about.svg?react"
+import PrivacyIcon from "../assets/icons/lock.svg?react"
+import ContactSupport from "../assets/icons/headset.svg?react"
+import RateApp from "../assets/icons/star-empty.svg?react"
+import ShareApp from "../assets/icons/share-app.svg?react"
+import ArrowRight from "../assets/icons/arrow_right.svg?react"
 export {
+  ArrowRight,
+  ShareApp,
+  RateApp,
+  ContactSupport,
+  PrivacyIcon,
+  AboutIcon,
   Clock,
   Tick,
   Direction,
@@ -37,5 +49,6 @@ export {
   NavigationPin,
   DestinationPin,
   CurrentLocationPin,
-  BusinessPin
+  BusinessPin,
+  GuestUser
 };
