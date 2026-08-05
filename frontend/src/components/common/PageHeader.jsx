@@ -3,7 +3,7 @@ import { ArrowLeft } from "../../constants/icons";
 export const PageHeader = ({ title }) => {
   const navigate = useNavigate();
   return (
-    <div className="grid grid-cols-3 items-center">
+    <div className="sticky top-0 z-20 py-2 grid grid-cols-3 items-center bg-white">
       <div>
         <button
           type="button"
@@ -15,7 +15,7 @@ export const PageHeader = ({ title }) => {
         </button>
       </div>
 
-      <h1 className="text-center text-xl font-semibold text-primary tracking-wide">
+      <h1 className="flex justify-center items-center text-xl font-semibold text-primary tracking-wide text-nowrap">
         {title}
       </h1>
 

@@ -1,5 +1,8 @@
 import { GuestUser } from "../../constants/icons";
+import { useNavigate } from "react-router-dom";
+
 export const ProfileCard = ({ image, name, description, buttonText }) => {
+  const navigate = useNavigate();
   return (
     <div className="relative overflow-hidden rounded-xl border border-gray-200 bg-white p-8 mt-5">
       {/* Background Blur */}
@@ -31,6 +34,7 @@ export const ProfileCard = ({ image, name, description, buttonText }) => {
 
         {/* Button */}
         <button
+          onClick={()=>navigate('/login')}
           type="button"
           className="mt-4 w-56 rounded-xl bg-primary py-3 text-white transition duration-150 active:scale-95 hover:opacity-90"
         >
