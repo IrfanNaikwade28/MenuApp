@@ -32,6 +32,10 @@ export const menus = [
       {
         id: 1,
         name: "Starters",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 101, name: "Paneer Tikka", price: 280 },
           { id: 102, name: "Veg Spring Roll", price: 180 },
@@ -42,6 +46,10 @@ export const menus = [
       {
         id: 2,
         name: "Main Course",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 201, name: "Butter Chicken", price: 320 },
           { id: 202, name: "Kadai Paneer", price: 290 },
@@ -52,6 +60,10 @@ export const menus = [
       {
         id: 3,
         name: "Breads",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 301, name: "Butter Naan", price: 45 },
           { id: 302, name: "Garlic Naan", price: 60 },
@@ -62,6 +74,10 @@ export const menus = [
       {
         id: 4,
         name: "Rice & Biryani",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 401, name: "Veg Biryani", price: 250 },
           { id: 402, name: "Chicken Biryani", price: 340 },
@@ -72,6 +88,10 @@ export const menus = [
       {
         id: 5,
         name: "Desserts",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 501, name: "Gulab Jamun", price: 90 },
           { id: 502, name: "Brownie", price: 140 },
@@ -110,6 +130,10 @@ export const menus = [
       {
         id: 1,
         name: "Coffee",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 101, name: "Espresso", price: 120 },
           { id: 102, name: "Cappuccino", price: 170 },
@@ -120,6 +144,10 @@ export const menus = [
       {
         id: 2,
         name: "Beverages",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 201, name: "Cold Coffee", price: 180 },
           { id: 202, name: "Oreo Shake", price: 220 },
@@ -130,6 +158,10 @@ export const menus = [
       {
         id: 3,
         name: "Sandwiches",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 301, name: "Veg Sandwich", price: 160 },
           { id: 302, name: "Grilled Cheese", price: 180 },
@@ -140,6 +172,10 @@ export const menus = [
       {
         id: 4,
         name: "Pizza & Pasta",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 401, name: "Margherita Pizza", price: 260 },
           { id: 402, name: "Farmhouse Pizza", price: 320 },
@@ -150,6 +186,10 @@ export const menus = [
       {
         id: 5,
         name: "Desserts",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 501, name: "Cheesecake", price: 220 },
           { id: 502, name: "Brownie", price: 160 },
@@ -188,6 +228,10 @@ export const menus = [
       {
         id: 1,
         name: "South Indian",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 101, name: "Masala Dosa", price: 150 },
           { id: 102, name: "Idli Sambar", price: 100 },
@@ -198,6 +242,10 @@ export const menus = [
       {
         id: 2,
         name: "Punjabi",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
 
         items: [
           { id: 201, name: "Paneer Butter Masala", price: 300 },
@@ -209,6 +257,10 @@ export const menus = [
       {
         id: 3,
         name: "Rice",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 301, name: "Veg Biryani", price: 240 },
           { id: 302, name: "Jeera Rice", price: 150 },
@@ -219,6 +271,10 @@ export const menus = [
       {
         id: 4,
         name: "Breads",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 401, name: "Butter Naan", price: 45 },
           { id: 402, name: "Chapati", price: 20 },
@@ -229,6 +285,10 @@ export const menus = [
       {
         id: 5,
         name: "Desserts",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 501, name: "Gulab Jamun", price: 90 },
           { id: 502, name: "Jalebi", price: 100 },
@@ -266,6 +326,10 @@ export const menus = [
       {
         id: 1,
         name: "Cakes",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 101, name: "Chocolate Cake", price: 600 },
           { id: 102, name: "Black Forest", price: 580 },
@@ -276,6 +340,10 @@ export const menus = [
       {
         id: 2,
         name: "Pastries",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 201, name: "Chocolate Pastry", price: 120 },
           { id: 202, name: "Fruit Pastry", price: 130 },
@@ -286,6 +354,10 @@ export const menus = [
       {
         id: 3,
         name: "Breads",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 301, name: "Garlic Bread", price: 140 },
           { id: 302, name: "Whole Wheat Bread", price: 90 },
@@ -296,6 +368,10 @@ export const menus = [
       {
         id: 4,
         name: "Cookies",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 401, name: "Choco Chip Cookie", price: 70 },
           { id: 402, name: "Butter Cookie", price: 60 },
@@ -306,6 +382,10 @@ export const menus = [
       {
         id: 5,
         name: "Coffee",
+        categoryImages: [
+          { id: 1, image: '/images/Menu/menuItem.png' },
+          { id: 2, image: '/images/Menu/PaneerBiryani.png' },
+        ],
         items: [
           { id: 501, name: "Espresso", price: 120 },
           { id: 502, name: "Cappuccino", price: 170 },

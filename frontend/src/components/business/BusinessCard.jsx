@@ -23,6 +23,7 @@ export const BusinessCard = ({ business, disableNavigation = false }) => {
         <img
           src={business.coverImage}
           alt="Business"
+          loading="lazy"
           className="h-32 w-full object-cover"
         />
 

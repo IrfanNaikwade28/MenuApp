@@ -4,6 +4,7 @@ export const SpecialMenuCard = ({ item }) => {
       <div className="flex h-full">
         <img
           src={item.image}
+          loading="lazy"
           alt={item.name}
           className="h-28 w-28 object-cover p-2 rounded-2xl"
         />

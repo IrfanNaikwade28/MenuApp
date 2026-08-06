@@ -11,11 +11,15 @@ export const MenuAccordionItem = ({ category, isOpen, onToggle }) => {
       isOpen={isOpen}
       onToggle={onToggle}
     >
-      <div className="mt-3 flex h-20 w-full gap-2 overflow-x-auto">
-        <img
-          className="h-16 min-w-16 rounded-[14px] object-cover"
-          src="/images/Menu/menuItem.png"
-        />
+      <div className="mt-3 flex h-20 w-full gap-2 overflow-x-auto remove-scrollbar">
+        {category.categoryImages.map((item) => (
+          <img
+            key={item.id}
+            loading="lazy"
+            className="h-16 min-w-16 rounded-[14px] object-cover"
+            src={item.image}
+          />
+        ))}
       </div>
       <div className="flex flex-col gap-3 pb-2">
         {category.items.map((item) => (
